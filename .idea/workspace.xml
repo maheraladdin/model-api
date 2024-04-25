@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c61fa89-5eea-45e2-bfef-ead7361ba1ba" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/use_model.py" afterDir="false" />
+    <list default="true" id="4c61fa89-5eea-45e2-bfef-ead7361ba1ba" name="Changes" comment="UPD requirements.txt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/index.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/use_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/use_model.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +121,27 @@
       <workItem from="1710155006604" duration="1548000" />
       <workItem from="1712778838133" duration="836000" />
       <workItem from="1712885900899" duration="117000" />
+      <workItem from="1713555268196" duration="923000" />
+      <workItem from="1714038743987" duration="184000" />
+      <workItem from="1714039034127" duration="1936000" />
     </task>
+    <task id="LOCAL-00001" summary="add model ,and requirements.txt">
+      <option name="closed" value="true" />
+      <created>1713555344184</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713555344184</updated>
+    </task>
+    <task id="LOCAL-00002" summary="UPD requirements.txt">
+      <option name="closed" value="true" />
+      <created>1713555917628</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713555917628</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +149,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="add model ,and requirements.txt" />
+    <MESSAGE value="UPD requirements.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPD requirements.txt" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/model_api$Flask__api_index_py_.coverage" NAME="Flask (api/index.py) Coverage Results" MODIFIED="1710155143983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

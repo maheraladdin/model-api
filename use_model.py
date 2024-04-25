@@ -1,9 +1,11 @@
 import numpy as np
-from tensorflow.keras.models import load_model
-from tensorflow.keras.applications.inception_v3 import preprocess_input
-from tensorflow.keras.preprocessing import image
-from tensorflow.keras.preprocessing.sequence import pad_sequences
+import tensorflow as tf
 from pickle import load
+
+load_model = tf.keras.models.load_model
+preprocess_input = tf.keras.applications.inception_v3.preprocess_input
+image = tf.keras.preprocessing.image
+pad_sequences = tf.keras.preprocessing.sequence.pad_sequences
 
 class ImageCaptioningModel:
     def __init__(self, model_path, feature_extraction_path):

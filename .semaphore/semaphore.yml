@@ -1,0 +1,24 @@
+version: v1.0
+name: Initial Pipeline
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu2004
+blocks:
+  - name: download python 3.11
+    task:
+      jobs:
+        - name: download python and display its version
+          commands:
+            - checkout
+            - sudo apt update
+            - 'sudo add-apt-repository ppa:deadsnakes/ppa'
+            - sudo apt install python3.11 -y
+            - python3.11 --version
+  - name: run flask app
+    task:
+      jobs:
+        - name: 'Job #1'
+          commands:
+            - pip install --no-cache-dir -r requirements.txt
+            - 'gunicorn app:app'

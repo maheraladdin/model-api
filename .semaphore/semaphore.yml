@@ -10,15 +10,6 @@ blocks:
       jobs:
         - name: download python and display its version
           commands:
-            - checkout
-            - sudo apt update
-            - 'sudo add-apt-repository ppa:deadsnakes/ppa'
-            - sudo apt install python3.11 -y
-            - python3.11 --version
-  - name: run flask app
-    task:
-      jobs:
-        - name: 'Job #1'
-          commands:
             - pip install --no-cache-dir -r requirements.txt
             - 'gunicorn app:app'
+    dependencies: []

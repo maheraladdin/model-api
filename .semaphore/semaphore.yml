@@ -10,6 +10,7 @@ blocks:
       jobs:
         - name: download python and display its version
           commands:
+            - checkout
             - pip install --no-cache-dir -r requirements.txt
             - 'gunicorn app:app'
     dependencies: []

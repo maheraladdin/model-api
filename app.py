@@ -8,18 +8,25 @@ from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.applications.vgg16 import VGG16, preprocess_input
 from tensorflow.keras.models import load_model, Model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.layers import Flatten, Dense
+
 
 app = Flask(__name__)
 
 # Load VGG model for image preprocessing
-vgg_model_path = r"./base/vgg16_weights_tf_dim_ordering_tf_kernels.h5"
-vgg_model = VGG16(weights=vgg_model_path, include_top=True, input_shape=(224, 224, 3))
+vgg_model_path = r"vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5"
+vgg_model = VGG16(weights=vgg_model_path, include_top=False, input_shape=(224, 224, 3))
 
-# Remove the last layer of the model
-vgg_model = Model(inputs=vgg_model.inputs, outputs=vgg_model.layers[-2].output)
+# Add custom layers
+x = Flatten(name='flatten')(vgg_model.output)
+x = Dense(4096, activation='relu', name='fc1')(x)
+x = Dense(4096, activation='relu', name='fc2')(x)
+
+# Create new model
+vgg_model = Model(inputs=vgg_model.input, outputs=x)
 
 # loading tokenizer
-with open('./working/tokenizer.pickle', 'rb') as handle:
+with open('tokenizer.pickle', 'rb') as handle:
     tokenizer = pickle.load(handle)
 
 vocab_size = len(tokenizer.word_index) + 1
@@ -95,7 +102,7 @@ def predict_real(image_url, model):
 
 
 # Load the English model
-model_eng_path = r"./working/models/best_model_LSTM_1.h5"  # Update with your model path
+model_eng_path = r"best_model_LSTM_1.h5"  # Update with your model path
 model_eng = load_model(model_eng_path)
 
 # Load the Arabic model
